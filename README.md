@@ -13,7 +13,7 @@ Some observations about HTML:
 
 JavaMarkup, is a html template engine similar to <b> npm's jade</b>, but uses non-indentation specific coding;
 <ul type="none">
-<li><b>Implementation</b> : C Programming</li>
+<li><b>Implementation</b> : Java Programming</li>
 <li><b>File type</b> : .jm</li>
 <li><b>Working</b> : file.jm --<code>JavaMarkup</code>--&gt file.html</li>
 </ul>
