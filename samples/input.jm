@@ -1,0 +1,66 @@
+doctype html
+head{
+	meta(charset="utf-8");
+	meta(name="viewport",content="width=device-width,initial-scale=1.0");
+	link(rel="icon",href="res/images/icon.png");
+	title{ Login:Webpage }
+	link(rel="stylesheet",href="res/css/style.css");
+	style(type="text/css"){
+		body{
+			background-color: rgb(41,68,77);
+			color:white;
+		}
+	}
+}
+body{
+	script(src="res/js/scriptfile.js");
+	lists=['login','register','ask','back'];
+	div.header{
+		h1#brand{
+			a.default(href="index.html"){
+				Brand name
+			}
+		}
+		%i for 4%
+			div.popup(id=$lists[$i],onmouseover="popUp('"+$lists[$i]+"text')",onmouseout="popUp('"+$lists[$i]+"text')"){
+				a(href=$lists[$i]+".html"){
+					img.credentialimg(id=$lists[$i]+"img",src="res/images/"+$lists[$i]+".png");
+				}
+				span.text(id=$lists[$i]+"text"){ $lists[$i] }
+			}
+		%endfor%
+	}
+	div.content{
+		h2{ Sign in }
+		hr;
+		form(method="POST",action="homepage.php"){
+			center{
+				table{
+					tr{
+						td{ label{ Username } }
+						td{ : }
+						td{ input#usernameinput(name="username",type="text",required); }
+						%i for 4% td; %endfor%
+					}
+					tr{
+						td{ label{ Password } }
+						td{ : }
+						td{ input#passwdinput(name="password",type="password",required); }
+						%i for 4% td; %endfor%
+					}
+					tr;
+					tr{
+						td; td;
+						td{ input(name="loginbutton",type="submit",value="Login"); }
+						%i for 4% td; %endfor%
+					}
+				}
+			}
+		}
+	}
+	script(type="text/javascript"){
+		function popUp(word){
+			console.log(word);
+		}
+	}
+}
