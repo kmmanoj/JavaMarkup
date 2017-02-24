@@ -21,21 +21,21 @@ JavaMarkup, is a html template engine similar to <b> npm's jade</b>, but uses no
 <h3>JavaMarkup</h3>
 <ul type="square">
 	<li>
-		The first line <code>doctype html</code> is optional. If it exists in .jm file, then its corresponding .html file contains <code>&lt!DOCTYPE html&gt</code><br/>
+		The first line <code>doctype html</code> is optional. If it exists in .jm file, then its corresponding .html file contains <code>&lt;!DOCTYPE html&gt;</code><br/>
 	</li>
 	<li>
 		A html tag can be syntactically similar to a function call as in imperative language.<br/>
 		For example, <br/>
 		<code>img(src="path/to/file.jpg",alt="image");</code><br/>
 		corresponds to<br/>
-		<code>&lt img src="path/to/file.jpg" alt="image"/&gt</code><br/>
+		<code>&lt;img src="path/to/file.jpg" alt="image"/&gt;</code><br/>
 	</li>
 	<li>
 		A html tag with innerHTML is followed by flower braces enclosing raw text<br/>
 		For example, <br/>
 		<code>a(href="nextpage.html"){Next}</code><br/>
 		corresponds to <br/>
-		<code>&lt a href="nextpage.html"&gt Next&lt/a&gt</code><br/>
+		<code>&lt;a href="nextpage.html"&gt;Next&lt;/a&gt;</code><br/>
 	</li>
 	<li>
 		The most common attributes class, and id can also be represented in a single line with the html tag
@@ -43,7 +43,7 @@ JavaMarkup, is a html template engine similar to <b> npm's jade</b>, but uses no
 		For example, <br/>
 		<code>p#id.class(){}</code> <br/>
 		corresponds to<br/>
-		<code>&lt p id="id" class="class"&gt &lt/p&gt</code><br/>
+		<code>&lt;p id="id" class="class"&gt;&lt;/p&gt;</code><br/>
 	</li>
 	<li>
 		The script tag innerHTML will have the usual javascript code and syntax. The javascript code is not parsed.<br/>
@@ -56,18 +56,18 @@ JavaMarkup, is a html template engine similar to <b> npm's jade</b>, but uses no
 		</code><br/>
 		corresponds to<br/>
 		<code> 
-			&lt script type="text/javascript"&gt<br/>
+			&lt;script type="text/javascript"&gt;<br/>
 				window.alert("JavaMarkup\'s javascript"); <br/>
-			&lt/script&gt
+			&lt;/script&gt;
 		</code><br/>
 		<code> 
 			style(type="text/css"){ img{ width: 100px; height: 100px; float: right; } }
 		</code><br/>
 		corresponds to<br/>
 		<code> 
-			&lt style type="text/css"&gt <br/>
+			&lt;style type="text/css"&gt;<br/>
 				img{ width: 100px; height: 100px; float: right; }<br/>
-			&lt style&gt
+			&lt;style&gt;
 		</code><br/>
 	</li>
 	<li>
