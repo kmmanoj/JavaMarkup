@@ -18,33 +18,33 @@ body{
 	div.header{
 		h1#brand{
 			a.default(href="index.html"){
-				Brand name
+				"Brand name"
 			}
 		}
-		%i for 4%
+		%i rep 4%
 			div.popup(id=$lists[$i],onmouseover="popUp('"+$lists[$i]+"text')",onmouseout="popUp('"+$lists[$i]+"text')"){
 				a(href=$lists[$i]+".html"){
 					img.credentialimg(id=$lists[$i]+"img",src="res/images/"+$lists[$i]+".png");
 				}
 				span.text(id=$lists[$i]+"text"){ $lists[$i] }
 			}
-		%endfor%
+		%endrep%
 	}
 	div.content{
-		h2{ Sign in }
+		h2{ "Sign in" }
 		hr;
 		form(method="POST",action="homepage.php"){
 			center{
 				table{
 					tr{
-						td{ label{ Username } }
-						td{ : }
+						td{ label{ "Username" } }
+						td{ ":"" }
 						td{ input#usernameinput(name="username",type="text",required); }
 						%i for 4% td; %endfor%
 					}
 					tr{
-						td{ label{ Password } }
-						td{ : }
+						td{ label{ "Password" } }
+						td{ ":"" }
 						td{ input#passwdinput(name="password",type="password",required); }
 						%i for 4% td; %endfor%
 					}

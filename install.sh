@@ -27,6 +27,16 @@ echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAM
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/utilities/Sys.java
 echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/CommentRemover.java";
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/CommentRemover.java
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/Type.java";
+javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/Type.java
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/State.java";
+javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/State.java
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/TransitionDiagram.java";
+javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/TransitionDiagram.java
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/SymbolRecord.java";
+javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/SymbolRecord.java
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/Tokenizer.java";
+javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/Tokenizer.java
 echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/LexicalAnalyser.java";
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/LexicalAnalyser.java
 echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/Main.java";

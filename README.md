@@ -105,9 +105,9 @@ JavaMarkup, is a html template engine similar to <b> npm's jade</b>, but uses no
 		JavaMarkup supports iterative rendering of html code, and supports arrays, to achieve DRY (Don't Repeat Yourself)<br/>
 		<code>
 		ul(type="none"){<br/>
-		% i for 10 %<br/>
+		% i rep 10 %<br/>
 			li{ "List item "+$i }
-		% endfor %<br/>
+		% endrep %<br/>
 		}<br/>
 		</code><br/>
 		JavaMarkup Arrays are defined as:
