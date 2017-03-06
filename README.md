@@ -91,17 +91,6 @@ JavaMarkup, is a html template engine similar to <b> npm's jade</b>, but uses no
 		</code><br/>
 	</li>
 	<li>
-		JavaMarkup supports conditional rendering of html code using conditional statements<br/>
-		For example,<br/>
-		<code>
-		% if ( $variable == "positive" ) %<br/>
-			p.class1(){ A positive output. }<br/>
-		% else %<br/>
-			p.class2(){ A non-poitive output. }<br/>
-		% endif %<br/>
-		</code><br/>
-	</li>
-	<li>
 		JavaMarkup supports iterative rendering of html code, and supports arrays, to achieve DRY (Don't Repeat Yourself)<br/>
 		<code>
 		ul(type="none"){<br/>

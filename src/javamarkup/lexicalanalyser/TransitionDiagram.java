@@ -115,7 +115,7 @@ class TransitionDiagram {
 
         // handling keywords : 1
         String[] keywords = {
-                "else","endif","endrep","if","rep","doctype","html"
+                "endrep","rep","doctype","html"
         };
         for(String key : keywords)
             this.insert(key, Type.KEYWORD);
