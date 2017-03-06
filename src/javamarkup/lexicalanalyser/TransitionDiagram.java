@@ -167,7 +167,7 @@ class TransitionDiagram {
                 "ontimeupdate","ontoggle","onunload","onvolumechange","onwaiting","onwheel","open","optimum",
                 "pattern","placeholder","poster","preload",
                 "readonly","rel","required","reversed","rows","rowspan",
-                "sandbox","scope","scoped","selected","shape","size","sizes","span","spellcheck","src","srcdoc","srclang","srcset","start","step","style",
+                "sandbox","scope","scoped","selected","shape","size","sizes","span","spellcheck","src","srcdoc","srclang","srcset","start","step","istyle",
                 "tabindex","target","title","translate","type",
                 "usemap",
                 "value",
