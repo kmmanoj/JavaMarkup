@@ -168,7 +168,7 @@ class TransitionDiagram {
                 "pattern","placeholder","poster","preload",
                 "readonly","rel","required","reversed","rows","rowspan",
                 "sandbox","scope","scoped","selected","shape","size","sizes","span","spellcheck","src","srcdoc","srclang","srcset","start","step","istyle",
-                "tabindex","target","title","translate","type",
+                "tabindex","target","ititle","translate","type",
                 "usemap",
                 "value",
                 "width","wrap"
