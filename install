@@ -7,7 +7,6 @@ if [ -n "${check_installed}" ]; then
 	sed -i.bak "/export JAVAMARKUP_HOME=/d" ~/.bashrc
 fi
 javamarkup_home=`pwd`
-echo "" >> ~/.bashrc
 export JAVAMARKUP_HOME=${javamarkup_home}
 echo "export JAVAMARKUP_HOME=${javamarkup_home}" >> ~/.bashrc
 
