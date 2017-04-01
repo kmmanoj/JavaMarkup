@@ -1,0 +1,11 @@
+#!/bin/bash
+check_installed=`cat ~/.bashrc | grep JAVAMARKUP_HOME`
+
+echo -e "\033[1mDestroying the environment\033[0m";
+
+if [ -n "${check_installed}" ]; then
+	sed -i "/export JAVAMARKUP_HOME=/d" ~/.bashrc
+fi
+
+sudo rm /usr/local/bin/jmparse
+echo -e "\033[1;32mJavaMarkup uninstall complete!!\033[0m";
