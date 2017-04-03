@@ -8,6 +8,21 @@ class Tokenizer{
 	public static void tokenize(File inputFile) throws IOException{
 		FileInputStream f = new FileInputStream(inputFile);
         TransitionDiagram td = TransitionDiagram.getTransitionDiagram();
+        // TO CODE : retrieve the serialized object
+		// TransitionDiagram td = null;
+		// try {
+		// 	FileInputStream infile = new FileInputStream("/home/kmmanoj/td.ser");
+		// 	ObjectInputStream objin = new ObjectInputStream(infile);
+		// 	td = (TransitionDiagram) objin.readObject();
+		// 	objin.close();
+		// 	infile.close();
+		// } catch(IOException e) {
+		// 	e.printStackTrace();
+		// } catch(ClassNotFoundException c) {
+		// 	System.out.println("Cannot find TransitionDiagram class\n");
+		// 	c.printStackTrace();
+		// }
+
 		String lexeme = "";
 		char character='\0';
 		int c=0;

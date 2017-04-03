@@ -35,10 +35,13 @@ echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalys
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/Tokenizer.java
 echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/LexicalAnalyser.java";
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/LexicalAnalyser.java
+# echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/InstallTD.java";
+# javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/InstallTD.java
 echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/Main.java";
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/Main.java
 
 echo -e "\033[1mFinishing installation\033[0m";
+# java -classpath ${JAVAMARKUP_HOME}/bin javamarkup.lexicalanalyser.InstallTD
 echo "java -classpath ${JAVAMARKUP_HOME}/bin javamarkup.Main \$@" > ~/jmparse
 sudo mv ~/jmparse /usr/local/bin/jmparse
 sudo chmod +x /usr/local/bin/jmparse
