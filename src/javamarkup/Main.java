@@ -133,16 +133,9 @@ public class Main{
 			}
 		}
 
-		System.out.println("// // // To compilation with saveTemps : "+saveTemps+", input : "+inputFile+" and output : "+outputFile);
+		System.out.println("// To compilation with saveTemps : "+saveTemps+", input : "+inputFile+" and output : "+outputFile);
 
-		LexicalAnalyser.analyse(inputFile);
-
-		/*
-		*	TO CODE functions to perform after the environment and requirements are set
-		*	...
-		*	...
-		*	...
-		*/
+		Compiler.compile(inputFile);
 
 		if(!saveTemps){
 			Sys.executeCommand("rm "+inputFile.getName().split("[.]")[0]+".clean.jm");

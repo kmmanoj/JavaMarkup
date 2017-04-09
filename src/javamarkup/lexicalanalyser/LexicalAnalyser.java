@@ -9,22 +9,26 @@ import java.io.*;
 *	to provide abstract overview of the working of lexical Analyser
 */
 public class LexicalAnalyser{
-	public static void analyse(File sourceCode){
+	public static int analyse(File sourceCode){
 		try{
 			int status = CommentRemover.removeComments(sourceCode);
-			if(status != 0)
-				throw new Exception("Exception occured while removing comments from the file");
+			if(status != 0){
+				System.err.println("Exception occured while removing comments from the file");
+				return -1;
+			}
 
 			File cleanFile = new File((new File(sourceCode.getName().split("[.]")[0]+".clean.jm")).getAbsolutePath());
-			if(!cleanFile.exists())
-				throw new Exception("Unable to access pure source code file for TOKENIZATION");
+			if(!cleanFile.exists()){
+				System.err.println("Unable to access pure source code file for TOKENIZATION");
+				return -2;
+			}
 			Tokenizer.tokenize(cleanFile);
-			//TO CODE 
 
 		} catch(IOException e){
 			e.printStackTrace();
 		} catch(Exception e){
 			e.printStackTrace();
 		}
+		return 0;
 	}
 }
