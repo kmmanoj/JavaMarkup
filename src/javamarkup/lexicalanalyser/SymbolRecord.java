@@ -1,6 +1,6 @@
 package javamarkup.lexicalanalyser;
 
-class SymbolRecord{
+public class SymbolRecord{
 	public int tokenCount;
 	public Type type;
 	public String value;

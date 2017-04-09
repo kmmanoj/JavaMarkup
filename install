@@ -19,25 +19,32 @@ fi
 
 echo -e "\033[1mCompiling Source code\033[0m";
 
-echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/utilities/Sys.java";
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/utilities/Sys.java"
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/utilities/Sys.java
-echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/CommentRemover.java";
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/CommentRemover.java"
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/CommentRemover.java
-echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/Type.java";
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/Type.java"
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/Type.java
-echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/State.java";
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/State.java"
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/State.java
-echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/TransitionDiagram.java";
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/TransitionDiagram.java"
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/TransitionDiagram.java
-echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/SymbolRecord.java";
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/SymbolRecord.java"
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/SymbolRecord.java
-echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/Tokenizer.java";
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/Tokenizer.java"
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/Tokenizer.java
-echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/LexicalAnalyser.java";
-javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/LexicalAnalyser.java
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/LexicalAnalyser.java"
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/syntaxanalyser/SyntaxAnalyser.java"
+javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/syntaxanalyser/SyntaxAnalyser.java
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/syntaxanalyser/Mapper.java"
+javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/syntaxanalyser/Mapper.java
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/syntaxanalyser/Parser.java"
+javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/syntaxanalyser/Parser.java
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/syntaxanalyser/PredictiveParsingTable.java"
+javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/syntaxanalyser/PredictiveParsingTable.java
 # echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/InstallTD.java";
 # javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/lexicalanalyser/InstallTD.java
-echo -e "\033[1mCompiling\033[0m ${JAVAMARKUP_HOME}/src/javamarkup/Main.java";
+echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/Main.java"
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/Main.java
 
 echo -e "\033[1mFinishing installation\033[0m";

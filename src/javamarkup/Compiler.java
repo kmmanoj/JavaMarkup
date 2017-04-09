@@ -2,6 +2,7 @@ package javamarkup;
 
 import java.io.*;
 import javamarkup.lexicalanalyser.LexicalAnalyser;
+import javamarkup.syntaxanalyser.SyntaxAnalyser;
 
 class Compiler{
 	// TO CODE methods that are available to javamarkup.Main as an API for parsing javamarkup programs into html files
@@ -11,6 +12,6 @@ class Compiler{
 			System.err.println("Error while occured while performing Lexical Analysis");
 			return;
 		}
-		System.out.println(sourceCode);
+		SyntaxAnalyser.analyse(sourceCode);
 	}
 }

@@ -1,6 +1,6 @@
 package javamarkup.lexicalanalyser;
 
-enum Type {
+public enum Type {
     DELIMITER("delimiter", 0),
     KEYWORD("keyword",1),
     TAG("tag",2),

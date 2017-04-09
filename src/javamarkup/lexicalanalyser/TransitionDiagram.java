@@ -115,7 +115,7 @@ class TransitionDiagram {
 
         // handling keywords : 1
         String[] keywords = {
-                "endrep","rep","doctype","html"
+                "endrep","rep","doctype"
         };
         for(String key : keywords)
             this.insert(key, Type.KEYWORD);
@@ -128,7 +128,7 @@ class TransitionDiagram {
                 "datalist","dd","del","details","dfn","dialog","dir","div","dl","dt",
                 "em","embed",
                 "fieldset","figcaption","figure","font","footer","form","frame","frameset",
-                "h1","h2","h3","h4","h5","h6","head","header","hr",
+                "h1","h2","h3","h4","h5","h6","head","header","hr","html",
                 "i","iframe","img","input","ins",
                 "kbd","keygen",
                 "label","legend","li","link",
