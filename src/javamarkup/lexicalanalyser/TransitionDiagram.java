@@ -98,7 +98,7 @@ class TransitionDiagram {
             this.root.nextStates.put(c, this.root);
 
         // handling symbols : 6
-        Character[] symbols = {'.','#','$','+','{','}','(',')',',','/','[',']','%',';',':','='};
+        Character[] symbols = {'.','#','$','+','{','}','(',')',',','/','[',']','%',';',':','=','\''};
         for(Character c :symbols)
             this.root.nextStates.put(c, symbol);
 

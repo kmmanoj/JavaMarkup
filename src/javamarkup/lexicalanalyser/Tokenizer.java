@@ -41,7 +41,11 @@ class Tokenizer{
 				if(tmp != td.getRoot())
 					lexeme += character;
 			}
-			if(tmp.isToken()) {
+			if(tmp == null){
+				tmp = td.getRoot();
+				continue;
+			}
+			else if(tmp.isToken()) {
 				// some patch up work
 				while(delimiters.contains(lexeme.charAt(lexeme.length()-1)))
 					lexeme = lexeme.substring(0, lexeme.length()-1);
