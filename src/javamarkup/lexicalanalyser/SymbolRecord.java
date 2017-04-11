@@ -11,6 +11,6 @@ public class SymbolRecord{
 	}
 	@Override
 	public String toString(){
-		return this.tokenCount+","+this.value+","+this.type.getTypeName();
+		return this.tokenCount+" "+this.value+" "+this.type.getTypeName();
 	}
 }

@@ -13,8 +13,11 @@ public class SyntaxAnalyser{
 			buf = new BufferedReader(new FileReader(sourcecode.getName().split("[.]")[0]+".symboltable.jm"));
 			String line = null;
 			while((line = buf.readLine())!=null){
-				String[] words = line.split(",");
-				symbolTable.add(new SymbolRecord(Integer.parseInt(words[0]), words[1], Mapper.getType(words[2])));
+				String[] words = line.split(" ");
+				String value = "";
+				for(int i=1;i<words.length-1;i++)
+					value+=words[i];
+				symbolTable.add(new SymbolRecord(Integer.parseInt(words[0]), value, Mapper.getType(words[words.length-1])));
 			} 
 		}catch(IOException e){
 			System.out.println("error");

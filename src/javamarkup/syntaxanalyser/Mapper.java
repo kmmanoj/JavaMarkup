@@ -28,6 +28,15 @@ public class Mapper{
 			default : return "";
 		}
 	}
+	public static String getMappedType(String input){
+		switch(input){
+			case "t" : return "Tag";
+			case "s" : return "String";
+			case "i" : return "Identifier";
+			case "a" : return "Attribute";
+			default : return null;
+		}
+	}
 	public static String generateInputString(ArrayList<SymbolRecord> symbolTable){
 		String input = "";
 		for(SymbolRecord s : symbolTable)
