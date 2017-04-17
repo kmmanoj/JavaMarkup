@@ -133,9 +133,7 @@ public class Main{
 			}
 		}
 
-		System.out.println("// To compilation with saveTemps : "+saveTemps+", input : "+inputFile+" and output : "+outputFile);
-
-		Compiler.compile(inputFile);
+		String targetCode = Compiler.compile(inputFile);
 
 		if(!saveTemps){
 			Sys.executeCommand("rm "+inputFile.getName().split("[.]")[0]+".clean.jm");
@@ -147,7 +145,7 @@ public class Main{
 		}
 		try{
 			BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
-			writer.write("<html>\n\tLoading...\n</html>");
+			writer.write(targetCode);
 			writer.close();
 		} catch(IOException e){
 			outputFile.delete();

@@ -5,7 +5,7 @@ import java.util.*;
 import java.io.*;
 
 public class SyntaxAnalyser{
-	public static void analyse(File sourcecode){
+	public static int analyse(File sourcecode){
 		// retrieve the symbol table
 		ArrayList<SymbolRecord> symbolTable = new ArrayList<>();
 		BufferedReader buf;
@@ -24,7 +24,9 @@ public class SyntaxAnalyser{
 		}
 
 		String inputString = Mapper.generateInputString(symbolTable);
-		System.out.println(inputString);
-		ArrayList<String> errorLogs = Parser.parse(inputString, symbolTable);
+		System.err.println(inputString);
+		Parser parser = new Parser();
+		int errorCount = parser.parse(inputString, symbolTable);
+		return errorCount;
 	}
 }

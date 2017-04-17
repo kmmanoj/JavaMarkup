@@ -1,5 +1,9 @@
 package javamarkup.codegenerator;
 
+import javamarkup.semanticanalyser.DOM;
+
 public class CodeGenerator{
-	// TO CODE public methods that are available as an API to javamarkup.Compiler
+	public static String generateCode(DOM dom){
+		return dom.printCode(dom.root, 0);
+	}
 }

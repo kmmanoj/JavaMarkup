@@ -13,13 +13,13 @@ public class LexicalAnalyser{
 		try{
 			int status = CommentRemover.removeComments(sourceCode);
 			if(status != 0){
-				System.err.println("Exception occured while removing comments from the file");
+				System.out.println("Exception occured while removing comments from the file");
 				return -1;
 			}
 
 			File cleanFile = new File((new File(sourceCode.getName().split("[.]")[0]+".clean.jm")).getAbsolutePath());
 			if(!cleanFile.exists()){
-				System.err.println("Unable to access pure source code file for TOKENIZATION");
+				System.out.println("Unable to access pure source code file for TOKENIZATION");
 				return -2;
 			}
 			Tokenizer.tokenize(cleanFile);

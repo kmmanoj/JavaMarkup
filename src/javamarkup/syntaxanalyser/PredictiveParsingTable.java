@@ -3,8 +3,8 @@ package javamarkup.syntaxanalyser;
 import java.util.*;
 
 public class PredictiveParsingTable{
-	static HashMap<String, HashMap<String, String>> table;
-	private static void fillTable(){
+	HashMap<String, HashMap<String, String>> table;
+	public PredictiveParsingTable(){
 		table = new HashMap<>();
 		HashMap<String, String> recordS = new HashMap<>();
 		recordS.put("t","XHAPt");
@@ -24,6 +24,7 @@ public class PredictiveParsingTable{
 		recordP.put("(","CD");
 		recordP.put("{","CD");
 		recordP.put("$","CD");
+		recordP.put("}","");
 		table.put("P",recordP);
 
 		HashMap<String, String> recordC = new HashMap<>();
@@ -48,6 +49,7 @@ public class PredictiveParsingTable{
 		recordA.put("(",")L(");
 		recordA.put("$","");
 		recordA.put("{","");
+		recordA.put("}","");
 		table.put("A",recordA);
 
 		HashMap<String, String> recordL = new HashMap<>();
@@ -64,6 +66,7 @@ public class PredictiveParsingTable{
 		recordH.put("t","");
 		recordH.put("$","");
 		recordH.put("{","}I{");
+		recordH.put("}","");
 		table.put("H",recordH);
 
 		HashMap<String, String> recordI = new HashMap<>();
@@ -73,13 +76,8 @@ public class PredictiveParsingTable{
 		table.put("I",recordI);
 	}
 
-	public static void initTable(){
-		if(table == null) 
-			fillTable();
-	}
-
-	public static String M(String nonTerminal, String terminal){
-		if(nonTerminal=="$") return null;
+	public String M(String nonTerminal, String terminal){
+		if(table.get(nonTerminal)==null) return null;
 		else if(table.get(nonTerminal).containsKey(terminal)) return table.get(nonTerminal).get(terminal);
 		else return null; 
 	}

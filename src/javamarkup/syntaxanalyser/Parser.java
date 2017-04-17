@@ -5,13 +5,13 @@ import javamarkup.lexicalanalyser.Type;
 import java.util.*;
 
 public class Parser{
-	static ArrayList<String> terminals;
-	static ArrayList<String> nonTerminals;
-	static Stack<String> stack;
+	ArrayList<String> terminals;
+	ArrayList<String> nonTerminals;
+	Stack<String> stack;
 
-	public static ArrayList<String> parse(String input, ArrayList<SymbolRecord> symbolTable){
-		ArrayList<String> errors = new ArrayList<>();
-		PredictiveParsingTable.initTable();
+	public int parse(String input, ArrayList<SymbolRecord> symbolTable){
+		int errors = 0;
+		PredictiveParsingTable predictiveParsingTable = new PredictiveParsingTable();
 		String[] t = {"t","s",".","i","#","(",")","a","=",",","{","}","$"};
 		terminals = new ArrayList<>(Arrays.asList(t));
 		String[] nt = {"S","X","P","C","D","A","L","M","H","I"};
@@ -23,22 +23,29 @@ public class Parser{
 
 		int i = 0;
 		while(i<input.length()){
-			String derived = PredictiveParsingTable.M(stack.peek(),Character.toString(input.charAt(i)));
+			String derived = predictiveParsingTable.M(stack.peek(),Character.toString(input.charAt(i)));
 			if(derived==null){
+				if(i==input.length()-1){ i++; continue; }
 				ErrorReport e = new ErrorReport(stack, input, symbolTable, i);
 				stack = e.stack;
 				i = e.i;
+				errors++;
 				continue;
 			}
 			String pop = stack.pop();
 			for(int j=0;j<derived.length();j++)
 				stack.push(Character.toString(derived.charAt(j)));
-			System.out.println("derived "+derived+" from "+pop+" and stack is : "+stack+" while input is "+input.substring(i));
+			System.err.println("derived "+derived+" from "+pop+" and stack is : "+stack+" while input is "+input.substring(i));
 			while(i<input.length() && stack.peek().equals(Character.toString(input.charAt(i)))){
 				i++;
 				stack.pop();
 			}
-			System.out.println("In the end the stack is : "+stack);
+			System.err.println("In the end the stack is : "+stack);
+		}
+		if(!stack.isEmpty()){
+			System.out.println("------ERROR---------");
+			System.out.println("The input program ended incompletely");
+			errors++;
 		}
 		return errors;
 	}
