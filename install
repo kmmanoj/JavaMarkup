@@ -316,7 +316,7 @@ echo "javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAM
 javac -d ${JAVAMARKUP_HOME}/bin -sourcepath ${JAVAMARKUP_HOME}/src ${JAVAMARKUP_HOME}/src/javamarkup/Main.java
 
 echo -e "\033[1mFinishing installation\033[0m";
-echo "java -classpath ${JAVAMARKUP_HOME}/bin javamarkup.Main \$@ 2> log.txt" > ~/jmparse
+echo "java -classpath ${JAVAMARKUP_HOME}/bin javamarkup.Main \$@ 2> log.txt; if [ \`cat log.txt | wc -l\` -lt 2 ]; then cat log.txt; rm log.txt; fi" > ~/jmparse
 sudo mv ~/jmparse /usr/local/bin/jmparse
 sudo chmod +x /usr/local/bin/jmparse
 
