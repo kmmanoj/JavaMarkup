@@ -33,6 +33,7 @@ public class PredictiveParsingTable{
 		recordC.put("(","");
 		recordC.put("{","");
 		recordC.put("$","");
+		recordC.put("}","");
 		table.put("C",recordC);
 
 		HashMap<String, String> recordD = new HashMap<>();
@@ -42,6 +43,7 @@ public class PredictiveParsingTable{
 		recordD.put("(","");
 		recordD.put("{","");
 		recordD.put("$","");
+		recordD.put("}","");
 		table.put("D",recordD);
 
 		HashMap<String, String> recordA = new HashMap<>();
