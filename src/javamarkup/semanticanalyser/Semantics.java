@@ -67,6 +67,8 @@ public class Semantics{
 				record = symbolTable.get(++this.iter);
 				if(tagWrapper.tag.shortClose){
 					record = symbolTable.get(--this.iter);
+					System.out.println("----- WARNING -----");
+					System.out.println(tag+" does not have innerhtml, skipping through its innerHTML");
 					moveAcrossInvalid();
 					if(this.iter+1==symbolTable.size()) record = null;
 					else record = symbolTable.get(++this.iter);	
