@@ -33,7 +33,7 @@ public class Semantics{
 				if(this.iter+1==symbolTable.size()) record = null;
 				else record = symbolTable.get(++this.iter);
 				System.err.println("filled ids, now the record is "+record);
-				if(record.type.getValue() == Type.TAG.getValue() || record.value.equals("}")) return tagWrapper;
+				if(record == null || record.type.getValue() == Type.TAG.getValue() || record.value.equals("}")) return tagWrapper;
 			} else if(record.value.equals(".")){
 				while(record !=null && record.value.equals(".")){
 					record = symbolTable.get(++this.iter);
@@ -42,7 +42,7 @@ public class Semantics{
 					else record = symbolTable.get(++this.iter);
 				}
 				System.err.println("filled classes, now the record is "+record);
-				if(record.type.getValue() == Type.TAG.getValue() || record.value.equals("}")) return tagWrapper;
+				if(record == null || record.type.getValue() == Type.TAG.getValue() || record.value.equals("}")) return tagWrapper;
 			} else if(record.value.equals("(")){
 				record = symbolTable.get(++this.iter);
 				while(record.type.getValue() == Type.ATTRIBUTE.getValue()){
@@ -62,7 +62,7 @@ public class Semantics{
 				if(this.iter+1==symbolTable.size()) record = null;
 				else record = symbolTable.get(++this.iter);
 				System.err.println("filled attributes, now the record is "+record);
-				if(record.type.getValue() == Type.TAG.getValue() || record.value.equals("}")) return tagWrapper;
+				if(record == null || record.type.getValue() == Type.TAG.getValue() || record.value.equals("}")) return tagWrapper;
 			} else if(record.value.equals("{")){
 				record = symbolTable.get(++this.iter);
 				if(tagWrapper.tag.shortClose){
